@@ -88,3 +88,7 @@ $allvms = Get-AzureRmVM | ft Name,ResourceGroupName > C:\Temp\allvms.csv
 # How to move resources to different resource groups
 $resource = Get-AzureRmResource -ResourceName AZMGT01 -ResourceGroupName Prod-Citrix
 Move-AzureRmResource -DestinationResourceGroupName Prod-Infra -ResourceId $resource.ResourceId
+
+Get-AzureRmVM | Select-Object Name,Statuses
+
+
